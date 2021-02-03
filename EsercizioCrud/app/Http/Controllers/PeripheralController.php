@@ -16,7 +16,7 @@ class PeripheralController extends Controller
 
     public function show($id) {
     
-    $periph = Peripheral::findOrFail();
+    $periph = Peripheral::findOrFail($id);
     return view('pages.peripheralShow', compact('periph'));
  }
 }

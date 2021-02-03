@@ -7,7 +7,7 @@
             @foreach ($peripherals as $item)
 
                 <li> 
-                    <a href = "{{ route('peripheralShow', $periph -> id) }}">
+                    <a href = "{{ route('peripheralShow', $item -> id) }}">
                         Nome: {{ $item -> name }} 
                         Modello: {{ $item -> model }}  
                     </a>
