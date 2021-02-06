@@ -18,5 +18,14 @@ class PeripheralController extends Controller
     
     $periph = Peripheral::findOrFail($id);
     return view('pages.peripheralShow', compact('periph'));
- }
+   }
+
+   public function create() {
+      return view('pages.peripheralCreate');
+   }
+
+   public function store(Request $request) {
+       Peripheral::create($request -> all());
+       return redirect() -> route('peripheralIndex');
+   }
 }

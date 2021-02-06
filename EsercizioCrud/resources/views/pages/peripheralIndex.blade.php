@@ -3,6 +3,7 @@
 @section('content')
 
     <h3>Elenco periferiche</h3>
+        <a href="{{ route('peripheralCreate') }}"> CREATE</a>
         <ul>
             @foreach ($peripherals as $item)
 
